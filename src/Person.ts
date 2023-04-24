@@ -54,6 +54,7 @@ export default class Person extends Player {
         }
         break;
       default:
+        this.gameBoard.messageError = 'Invalid Number!'
         break;
     }
   }

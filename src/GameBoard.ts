@@ -24,6 +24,28 @@ public printBoard(): void {
     this.messageError = '';
   }
 
+  public printWinInBoard(name: string) {
+    console.clear();
+
+    this._board.forEach((line) => {
+        console.log(`${line[0]}|${line[1]}|${line[2]}`);
+    });
+
+    console.log(`Victory for ${name} Winner!`)
+    this.messageError = '';
+  }
+
+  public printDrawInBoard() {
+    console.clear();
+
+    this._board.forEach((line) => {
+        console.log(`${line[0]}|${line[1]}|${line[2]}`);
+    });
+
+    console.log(`Game Over`)
+    this.messageError = '';
+  }
+
   public setValueInBoard(value: string, y: number, x: number): boolean {
     if (this._board[y][x] == '_') {
         this._board[y][x] = value;
